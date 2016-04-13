@@ -164,13 +164,6 @@ func main() {
 	}
 	flag.Set("bind", ":"+port)
 
-	channelID = os.Getenv("LINE_BOT_CHANNEL_ID")
-	log.Println("CHANNEL_ID:", channelID)
-	channelSecret = os.Getenv("LINE_BOT_CHANNEL_SECRET")
-	log.Println("CHANNEL_SECRET:", channelSecret)
-	channelMID = os.Getenv("LINE_BOT_CHANNEL_MID")
-	log.Println("CHANNEL_MID:", channelMID)
-
 	facebookToken = os.Getenv("FACEBOOK_TOKEN")
 	facebookVerifyToken = os.Getenv("FACEBOOK_VERIFY_TOKEN")
 
