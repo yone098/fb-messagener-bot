@@ -24,11 +24,15 @@ var facebookVerifyToken string
 var facebookToken string
 
 type id struct {
-	ID int `json:"id"`
+	ID int64 `json:"id"`
 }
 
 type text struct {
 	Text string `json:"text"`
+}
+
+type payload struct {
+	Payload string `json:"payload"`
 }
 
 type facebookMsg struct {
@@ -54,6 +58,13 @@ type message struct {
 	Mid  string `json:"mid"`
 	Seq  int64  `json:"seq"`
 	Text string `json:"text"`
+	// Attachment の場合
+	// Attachments attachments `json:"attachments"`
+}
+
+type attachments struct {
+	Type    string   `json:"type"`
+	Payload *payload `json:"payload"`
 }
 
 type delivery struct {
